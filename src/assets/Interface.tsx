@@ -1,3 +1,7 @@
+export interface MyComponentProps {
+	name: string;
+}
+
 export interface Gallery {
 	name: string;
 	videos: Video[];

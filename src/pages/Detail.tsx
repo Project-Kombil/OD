@@ -1,7 +1,13 @@
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
+
+import NavBar from "../components/NavBar";
 
 function Detail() {
-	return <Container maxWidth="xl">In Detail Page</Container>;
+	return (
+		<Box sx={{ flexGrow: 1 }}>
+			<NavBar name="DETAIL" />
+		</Box>
+	);
 }
 
 export default Detail;
