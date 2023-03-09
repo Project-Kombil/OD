@@ -4,6 +4,8 @@ import { AppBar, Box, Toolbar, Typography, IconButton } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import MoreIcon from "@mui/icons-material/MoreVert";
+import { positions } from "@mui/system";
+
 import DrawerMenu from "./DrawMenu";
 
 import { MyComponentProps } from "../assets/Interface";
@@ -28,7 +30,8 @@ function NavBar(props: MyComponentProps) {
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar
-				position="static"
+				sx={{ zIndex: 99 }}
+				position="absolute"
 				color={props.name === "DETAIL" ? "transparent" : "primary"}
 			>
 				<StyledToolbar>
