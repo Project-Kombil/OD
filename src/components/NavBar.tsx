@@ -27,7 +27,10 @@ function NavBar(props: MyComponentProps) {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<AppBar position="static">
+			<AppBar
+				position="static"
+				color={props.name === "DETAIL" ? "transparent" : "primary"}
+			>
 				<StyledToolbar>
 					<IconButton
 						size="large"

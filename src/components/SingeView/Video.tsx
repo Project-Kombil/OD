@@ -6,9 +6,8 @@ function Video(props: any) {
 			<CardActionArea>
 				<CardMedia
 					component="img"
-					height="150"
-					width="auto"
-					src={props.video_url}
+					height="100%"
+					src="https://images.unsplash.com/photo-1613266654520-c56e7f9e6e9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
 					alt="Video"
 				/>
 				{/* <CardContent></CardContent> */}

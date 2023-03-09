@@ -12,7 +12,7 @@ const galleryData: any = gallery;
 // 	return data.pictures;
 // }
 
-function VideosList(): JSX.Element {
+function VideosList() {
 	// const [data, setData] = useState<Gallery[]>([]);
 
 	// 	useEffect(() => {
@@ -27,11 +27,8 @@ function VideosList(): JSX.Element {
 		<Box
 			sx={{
 				display: "flex",
-				flexDirection: "column",
-				justifyContent: "center",
-				alignContent: "center",
-				p: 1,
-				m: 1,
+				flexWrap: "wrap",
+				justifyContent: "flex-start",
 			}}
 		>
 			{galleryData.videos.map((item: any) => (

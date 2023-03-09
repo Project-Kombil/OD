@@ -12,7 +12,7 @@ const galleryData: any = gallery;
 // 	return data.pictures;
 // }
 
-function PhotosList(): JSX.Element {
+function PhotosList() {
 	// const [data, setData] = useState<Gallery[]>([]);
 
 	// 	useEffect(() => {
@@ -27,10 +27,8 @@ function PhotosList(): JSX.Element {
 		<Box
 			sx={{
 				display: "flex",
-				flexDirection: "column",
-				justifyContent: "center",
-				p: 1,
-				m: 1,
+				flexWrap: "wrap",
+				justifyContent: "flex-start",
 			}}
 		>
 			{galleryData.pictures.map((item: any) => (

@@ -12,8 +12,7 @@ import NavBar from "../components/NavBar";
 function ElementInfo() {
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<NavBar name="DETAIL" />
-			<Card sx={{ maxWidth: "100%" }}>
+			<Card sx={{ maxWidth: 345 }}>
 				<CardActionArea>
 					<CardMedia
 						component="img"
@@ -31,6 +30,7 @@ function ElementInfo() {
 					</CardContent>
 				</CardActionArea>
 			</Card>
+			<NavBar name="DETAIL" />
 		</Box>
 	);
 }
