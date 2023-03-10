@@ -1,6 +1,9 @@
-import { Card, CardActionArea, CardMedia } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
-function Video(props: any) {
+import { Video as Motion } from "../../assets/Interface";
+
+function Video(data: Motion) {
 	return (
 		<Card sx={{ maxWidth: 345, m: 1 }}>
 			<CardActionArea>
@@ -10,7 +13,19 @@ function Video(props: any) {
 					src="https://images.unsplash.com/photo-1613266654520-c56e7f9e6e9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
 					alt="Video"
 				/>
-				{/* <CardContent></CardContent> */}
+				<CardContent
+					sx={{
+						color: "grey",
+						position: "absolute",
+					}}
+				>
+					<ThumbUpIcon
+						sx={{
+							color: "grey",
+							position: "absolute",
+						}}
+					/>
+				</CardContent>
 			</CardActionArea>
 		</Card>
 	);

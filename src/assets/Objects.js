@@ -44,7 +44,7 @@ export const gallery = {
 			description:
 				"Take a journey with us to explore the vibrant and bustling city life.",
 			image_url:
-				"https://images.unsplash.com/photo-1613266654520-c56e7f9e6e9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+				"https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6_4x3.jpg",
 		},
 		{
 			id: "2",
@@ -52,7 +52,7 @@ export const gallery = {
 			description:
 				"Discover the power and beauty of some of the most stunning waterfalls in the world.",
 			image_url:
-				"https://images.unsplash.com/photo-1613266654520-c56e7f9e6e9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+				"https://cdn3.dpmag.com/2021/07/Landscape-Tips-Mike-Mezeul-II.jpg",
 		},
 		{
 			id: "3",
@@ -60,7 +60,7 @@ export const gallery = {
 			description:
 				"Join us on an adventure to explore some of the most beautiful natural landscapes in the world.",
 			image_url:
-				"https://images.unsplash.com/photo-1613266654520-c56e7f9e6e9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+				"https://cloudfront.slrlounge.com/wp-content/uploads/2020/06/best-landscape-photographers-to-follow-in-2020-1200x675.jpg",
 		},
 		{
 			id: "4",
@@ -68,7 +68,7 @@ export const gallery = {
 			description:
 				"Discover the beauty of urban landscapes and skylines from around the world.",
 			image_url:
-				"https://images.unsplash.com/photo-1613266654520-c56e7f9e6e9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+				"https://assets.newatlas.com/dims4/default/08c9208/2147483647/strip/true/crop/4865x3243+68+0/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F9a%2F4d%2F351cca1a4a199cd8c9eb4cf4166e%2F37183-huan-vu-trung-tea-hill.jpg",
 		},
 		{
 			id: "5",
@@ -76,7 +76,7 @@ export const gallery = {
 			description:
 				"Experience the beauty of nature and the city in perfect harmony.",
 			image_url:
-				"https://images.unsplash.com/photo-1613266654520-c56e7f9e6e9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+				"https://photographylife.com/wp-content/uploads/2016/06/Mass.jpg",
 		},
 	],
 };

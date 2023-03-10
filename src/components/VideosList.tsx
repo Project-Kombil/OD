@@ -1,10 +1,10 @@
 // import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import Video from "./SingeView/Video";
-// import { Gallery, Video as Motion, Picture } from "../assets/Interface";
+import { Gallery, Video as Motion } from "../assets/Interface";
 
 import { gallery } from "../assets/Objects";
-const galleryData: any = gallery;
+const galleryData: Gallery = gallery;
 
 // async function fetchData(): Promise<Gallery[]> {
 // 	const response = await fetch("http://localhost:3003/api/gallery");
@@ -31,9 +31,9 @@ function VideosList() {
 				justifyContent: "flex-start",
 			}}
 		>
-			{galleryData.videos.map((item: any) => (
-				<Box key={item.id}>
-					<Video props={item} />
+			{galleryData.videos.map((data: Motion) => (
+				<Box key={data.id}>
+					<Video {...data} />
 				</Box>
 			))}
 		</Box>

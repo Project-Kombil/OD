@@ -1,36 +1,38 @@
-import {
-	Box,
-	Card,
-	CardActionArea,
-	CardContent,
-	CardMedia,
-	Typography,
-} from "@mui/material";
+import { useLocation } from "react-router-dom";
+import { Box } from "@mui/material";
 
 import NavBar from "../components/NavBar";
+import DetailInfo from "../components/DetailInfo";
+import Comment from "../components/SingeView/Comment";
+
+import { Gallery, Video as Motion } from "../assets/Interface";
+
+import { gallery } from "../assets/Objects";
+const galleryData: Gallery = gallery;
+
+export function randomNumberInRange(min: number, max: number): number {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 function ElementInfo() {
+	let { state } = useLocation();
+
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<NavBar name="DETAIL" />
-			<Card sx={{ maxWidth: "100%" }}>
-				<CardActionArea>
-					<CardMedia
-						component="img"
-						height="140"
-						sx={{
-							width: "100%",
-						}}
-						image="https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg"
-						alt="image"
+			<DetailInfo {...state} />
+
+			{galleryData.videos.map((data: Motion) => (
+				<Box key={data.id}>
+					<Comment
+						profilePic="https://randomuser.me/api/portraits/women/44.jpg"
+						name="Jane Smith"
+						comment={data.description}
+						likes={randomNumberInRange(10, 550)}
+						commentCount={randomNumberInRange(12, 100)}
 					/>
-					<CardContent>
-						<Typography gutterBottom variant="h5" component="div">
-							Lizard
-						</Typography>
-					</CardContent>
-				</CardActionArea>
-			</Card>
+				</Box>
+			))}
 		</Box>
 	);
 }
