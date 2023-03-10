@@ -25,7 +25,11 @@ function ElementInfo() {
 			{galleryData.videos.map((data: Motion) => (
 				<Box key={data.id}>
 					<Comment
-						profilePic="https://randomuser.me/api/portraits/women/44.jpg"
+						profilePic={
+							"https://randomuser.me/api/portraits/women/" +
+							randomNumberInRange(10, 50) +
+							".jpg"
+						}
 						name="Jane Smith"
 						comment={data.description}
 						likes={randomNumberInRange(10, 550)}
