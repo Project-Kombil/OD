@@ -6,35 +6,35 @@ export const gallery = {
 			name: "Overcoming Procrastination",
 			description:
 				"Learn how to overcome procrastination and increase your productivity.",
-			video_url: "https://www.youtube.com/watch?v=wfmMEQ8c_oo",
+			video_url: "youtube.com/watch?v=wfmMEQ8c_oo",
 		},
 		{
 			id: "2",
 			name: "Habits of Highly Successful People",
 			description:
 				"Discover the habits of highly successful people and how to apply them to your own life.",
-			video_url: "https://www.youtube.com/watch?v=yASaVNKs9yY",
+			video_url: "youtube.com/watch?v=yASaVNKs9yY",
 		},
 		{
 			id: "3",
 			name: "Mastering Time Management",
 			description:
 				"Learn how to master time management and take control of your day.",
-			video_url: "https://www.youtube.com/watch?v=Yey59NOFNFY",
+			video_url: "youtube.com/watch?v=Yey59NOFNFY",
 		},
 		{
 			id: "4",
 			name: "Mindfulness Meditation for Beginners",
 			description:
 				"Discover the benefits of mindfulness meditation and learn how to get started.",
-			video_url: "https://www.youtube.com/watch?v=bLpChrgS0AY",
+			video_url: "youtube.com/watch?v=bLpChrgS0AY",
 		},
 		{
 			id: "5",
 			name: "How to Build Self-Confidence",
 			description:
 				"Learn how to build self-confidence and overcome self-doubt.",
-			video_url: "hhttps://www.youtube.com/watch?v=ivNNgdCsY7o",
+			video_url: "youtube.com/watch?v=ivNNgdCsY7o",
 		},
 	],
 	pictures: [

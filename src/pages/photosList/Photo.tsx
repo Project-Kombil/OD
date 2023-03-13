@@ -5,13 +5,6 @@ import { Link } from "react-router-dom";
 import { Picture } from "../../assets/interface";
 
 function Photo(data: Picture) {
-	// const [data, setData] = useState("This");
-
-	// useEffect(() => {
-	// 	setData(props.data);
-	// 	console.log(data);
-	// }, []);
-
 	return (
 		<Card sx={{ maxWidth: 345, m: 1 }}>
 			<Link to={"/detail"} state={data}>

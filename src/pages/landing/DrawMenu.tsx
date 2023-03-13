@@ -1,15 +1,15 @@
-import { Link as RouterLink } from "react-router-dom";
 import {
 	Drawer,
 	Box,
+	Link,
 	List,
 	ListItem,
 	ListItemIcon,
 	ListItemText,
 } from "@mui/material";
-import Link from "@mui/joy/Link";
+
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
-import PhotoAlbumIcon from "@mui/icons-material/PhotoAlbum";
+import InfoIcon from "@mui/icons-material/Info";
 
 function DrawerMenu({ open, onClose }: any) {
 	return (
@@ -22,9 +22,7 @@ function DrawerMenu({ open, onClose }: any) {
 			>
 				<List>
 					<Link
-						component={RouterLink}
-						to="/"
-						state="1"
+						href="/"
 						underline="none"
 						sx={{ color: "grey", fontWeight: 500 }}
 					>
@@ -32,21 +30,19 @@ function DrawerMenu({ open, onClose }: any) {
 							<ListItemIcon>
 								<VideoLibraryIcon />
 							</ListItemIcon>
-							<ListItemText primary="VIDEOS" />
+							<ListItemText primary="GALLERY" />
 						</ListItem>
 					</Link>
 					<Link
-						component={RouterLink}
-						to="/"
-						state="2"
+						href="/detail"
 						underline="none"
-						sx={{ color: "grey" }}
+						sx={{ color: "grey", fontWeight: 500 }}
 					>
 						<ListItem>
 							<ListItemIcon>
-								<PhotoAlbumIcon />
+								<InfoIcon />
 							</ListItemIcon>
-							<ListItemText primary="PHOTOS" sx={{ fontWeight: 500 }} />
+							<ListItemText primary="DETAIL" sx={{ fontWeight: 500 }} />
 						</ListItem>
 					</Link>
 				</List>

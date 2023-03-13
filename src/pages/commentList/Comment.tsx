@@ -4,7 +4,14 @@ import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import { grey } from "@mui/material/colors";
 
-function Comment({ profilePic, name, comment, commentCount, likes }: any) {
+function Comment({
+	profilePic,
+	name,
+	comment,
+	time,
+	commentCount,
+	likes,
+}: any) {
 	const newColor = grey[700];
 	return (
 		<Grid
@@ -20,7 +27,12 @@ function Comment({ profilePic, name, comment, commentCount, likes }: any) {
 			}}
 		>
 			<Grid item>
-				<Avatar src={profilePic} alt="Profile Pic" sx={{ borderRadius: 0 }} />
+				<Avatar
+					src={profilePic}
+					alt="Profile Pic"
+					variant="square"
+					sx={{ height: "100%", width: "100%", borderRadius: 0 }}
+				/>
 			</Grid>
 			<Grid item xs>
 				<Grid
@@ -47,10 +59,10 @@ function Comment({ profilePic, name, comment, commentCount, likes }: any) {
 						<Grid item>
 							<Typography
 								sx={{ color: newColor }}
-								paddingRight={5}
+								paddingRight={3}
 								variant="body2"
 							>
-								10 minutes ago
+								{time} minutes ago
 							</Typography>
 						</Grid>
 						<Grid item>

@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { Box, Tab } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 
 import PhotosList from "../photosList";
 import VideosList from "../videosList";
 
-function TabView(state: any) {
-	const [value, setValue] = useState("1");
-
-	useEffect(() => {
-		setValue(state.state);
-	}, [state]);
+function TabView() {
+	const [value, setValue] = useState<string>("1");
 
 	const handleChange = (event: React.SyntheticEvent, newValue: string) => {
 		setValue(newValue);

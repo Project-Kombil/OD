@@ -15,6 +15,10 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	paddingBottom: theme.spacing(2),
 }));
 
+const CustomizedAppBar = styled(AppBar)`
+	color: #ab42e3;
+`;
+
 function NavBar(props: variableDeclaration) {
 	const [open, setOpen] = useState<any>(false);
 
@@ -28,9 +32,10 @@ function NavBar(props: variableDeclaration) {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<AppBar
+			<CustomizedAppBar
 				sx={{ zIndex: 99 }}
 				position={props.name === "DETAIL" ? "absolute" : "static"}
+				// color={props.name === "DETAIL" ? "transparent" : "primary"}
 				color={props.name === "DETAIL" ? "transparent" : "primary"}
 				elevation={props.name === "DETAIL" ? 0 : 4}
 			>
@@ -67,7 +72,7 @@ function NavBar(props: variableDeclaration) {
 						<MoreIcon />
 					</IconButton>
 				</StyledToolbar>
-			</AppBar>
+			</CustomizedAppBar>
 			<DrawerMenu open={open} onClose={handleDrawerClose} />
 		</Box>
 	);

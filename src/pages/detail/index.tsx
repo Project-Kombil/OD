@@ -34,6 +34,7 @@ function Detail() {
 						}
 						name="Jane Smith"
 						comment={data.description}
+						time={randomNumberInRange(2, 60)}
 						likes={randomNumberInRange(10, 550)}
 						commentCount={randomNumberInRange(12, 100)}
 					/>

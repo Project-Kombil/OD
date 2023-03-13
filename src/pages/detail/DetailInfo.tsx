@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import {
 	Box,
 	Card,
@@ -7,6 +6,7 @@ import {
 	CardMedia,
 	Typography,
 } from "@mui/material";
+// import { css } from "@emotion/react";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
@@ -16,20 +16,31 @@ import { Picture } from "../../assets/interface";
 // function for random number generator
 import { randomNumberInRange } from "../../assets/static/Functions";
 
+// Emotion Overlay
+// const coverOverlay: any = css`
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	background-color: rgba(171, 66, 227, 0.5);
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// `;
+
 function DetailInfo(data: Picture) {
 	const likeCount = randomNumberInRange(10, 74);
 	const commentCount = randomNumberInRange(10, 74);
 	const name = data.name;
 	const url = data.image_url;
 
-	// const [likeValue, setLikeValue] = useState(likeCount);
-	// const [commentValue, setCommentValue] = useState(commentCount);
-
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<Card>
 				<CardActionArea>
 					<CardMedia component="img" height="400" image={url} alt="image" />
+
 					<CardContent
 						sx={{
 							position: "absolute",
