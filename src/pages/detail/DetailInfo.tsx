@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {
 	Box,
 	Card,
@@ -22,8 +22,8 @@ function DetailInfo(data: Picture) {
 	const name = data.name;
 	const url = data.image_url;
 
-	const [likeValue, setLikeValue] = useState(likeCount);
-	const [commentValue, setCommentValue] = useState(commentCount);
+	// const [likeValue, setLikeValue] = useState(likeCount);
+	// const [commentValue, setCommentValue] = useState(commentCount);
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>

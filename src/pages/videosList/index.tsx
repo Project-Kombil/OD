@@ -5,7 +5,9 @@ import Video from "./Video";
 // variable declarations for type
 import { Gallery, Video as Motion } from "../../assets/interface";
 
+// dummy data
 import { gallery } from "../../api/Objects";
+
 const galleryData: Gallery = gallery;
 
 // async function fetchData(): Promise<Gallery[]> {
