@@ -5,6 +5,7 @@ import TabView from "./TabView";
 import NavBar from "../landing/NavBar";
 
 function Gallery() {
+	// state passing data to TabView
 	let { state } = useLocation();
 
 	return (

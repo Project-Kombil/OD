@@ -6,7 +6,8 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 
 import DrawerMenu from "./DrawMenu";
 
-import { MyComponentProps } from "../../assets/interface";
+// variable declarations for type
+import { variableDeclaration } from "../../assets/interface";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	alignItems: "flex-start",
@@ -14,8 +15,8 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	paddingBottom: theme.spacing(2),
 }));
 
-function NavBar(props: MyComponentProps) {
-	const [open, setOpen] = useState(false);
+function NavBar(props: variableDeclaration) {
+	const [open, setOpen] = useState<any>(false);
 
 	const handleDrawerOpen = () => {
 		setOpen(true);

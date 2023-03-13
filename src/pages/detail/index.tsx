@@ -5,16 +5,18 @@ import NavBar from "../landing/NavBar";
 import DetailInfo from "./DetailInfo";
 import Comment from "../commentList/Comment";
 
+// variable declarations for type
 import { Gallery, Video as Motion } from "../../assets/interface";
 
 // Random Number Generator
-import { randomNumberInRange } from "../../assets/static/randomNumberGenerator";
+import { randomNumberInRange } from "../../assets/static/Functions";
 
 // dummy data
 import { gallery } from "../../api/Objects";
 const galleryData: Gallery = gallery;
 
 function Detail() {
+	// state for Details
 	let { state } = useLocation();
 
 	return (

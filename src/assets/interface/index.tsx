@@ -1,4 +1,4 @@
-export interface MyComponentProps {
+export interface variableDeclaration {
 	name: string;
 }
 

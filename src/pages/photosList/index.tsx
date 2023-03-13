@@ -1,6 +1,8 @@
 // import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import Photo from "./Photo";
+
+// variable declarations for type
 import { Gallery, Picture } from "../../assets/interface";
 
 import { gallery } from "../../api/Objects";

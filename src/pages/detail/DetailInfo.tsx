@@ -10,9 +10,11 @@ import {
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
+// variable declarations for type
 import { Picture } from "../../assets/interface";
 
-import { randomNumberInRange } from "../../assets/static/randomNumberGenerator";
+// function for random number generator
+import { randomNumberInRange } from "../../assets/static/Functions";
 
 function DetailInfo(data: Picture) {
 	const likeCount = randomNumberInRange(10, 74);
