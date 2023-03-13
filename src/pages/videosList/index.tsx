@@ -1,9 +1,9 @@
 // import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
-import Photo from "./SingeView/Photo";
-import { Gallery, Picture } from "../assets/Interface";
+import Video from "./Video";
+import { Gallery, Video as Motion } from "../../assets/interface";
 
-import { gallery } from "../assets/Objects";
+import { gallery } from "../../api/Objects";
 const galleryData: Gallery = gallery;
 
 // async function fetchData(): Promise<Gallery[]> {
@@ -12,7 +12,7 @@ const galleryData: Gallery = gallery;
 // 	return data.pictures;
 // }
 
-function CommentList() {
+function VideosList() {
 	// const [data, setData] = useState<Gallery[]>([]);
 
 	// 	useEffect(() => {
@@ -31,13 +31,13 @@ function CommentList() {
 				justifyContent: "flex-start",
 			}}
 		>
-			{galleryData.pictures.map((data: Picture) => (
+			{galleryData.videos.map((data: Motion) => (
 				<Box key={data.id}>
-					<Photo {...data} />
+					<Video {...data} />
 				</Box>
 			))}
 		</Box>
 	);
 }
 
-export default CommentList;
+export default VideosList;

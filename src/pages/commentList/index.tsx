@@ -1,9 +1,9 @@
 // import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
-import Photo from "./SingeView/Photo";
-import { Gallery, Picture } from "../assets/Interface";
+import Photo from "../photosList/Photo";
+import { Gallery, Picture } from "../../assets/interface";
 
-import { gallery } from "../assets/Objects";
+import { gallery } from "../../api/Objects";
 const galleryData: Gallery = gallery;
 
 // async function fetchData(): Promise<Gallery[]> {
@@ -12,7 +12,7 @@ const galleryData: Gallery = gallery;
 // 	return data.pictures;
 // }
 
-function PhotosList() {
+function CommentList() {
 	// const [data, setData] = useState<Gallery[]>([]);
 
 	// 	useEffect(() => {
@@ -40,4 +40,4 @@ function PhotosList() {
 	);
 }
 
-export default PhotosList;
+export default CommentList;

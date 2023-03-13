@@ -6,7 +6,7 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 
 import DrawerMenu from "./DrawMenu";
 
-import { MyComponentProps } from "../assets/Interface";
+import { MyComponentProps } from "../../assets/interface";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	alignItems: "flex-start",

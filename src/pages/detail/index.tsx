@@ -1,20 +1,20 @@
 import { useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
 
-import NavBar from "../components/NavBar";
-import DetailInfo from "../components/DetailInfo";
-import Comment from "../components/SingeView/Comment";
+import NavBar from "../landing/NavBar";
+import DetailInfo from "./DetailInfo";
+import Comment from "../commentList/Comment";
 
-import { Gallery, Video as Motion } from "../assets/Interface";
+import { Gallery, Video as Motion } from "../../assets/interface";
 
-import { gallery } from "../assets/Objects";
+// Random Number Generator
+import { randomNumberInRange } from "../../assets/static/randomNumberGenerator";
+
+// dummy data
+import { gallery } from "../../api/Objects";
 const galleryData: Gallery = gallery;
 
-export function randomNumberInRange(min: number, max: number): number {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function ElementInfo() {
+function Detail() {
 	let { state } = useLocation();
 
 	return (
@@ -41,4 +41,4 @@ function ElementInfo() {
 	);
 }
 
-export default ElementInfo;
+export default Detail;

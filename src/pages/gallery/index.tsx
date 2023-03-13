@@ -1,8 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
 
-import TabView from "../components/TabView";
-import NavBar from "../components/NavBar";
+import TabView from "./TabView";
+import NavBar from "../landing/NavBar";
 
 function Gallery() {
 	let { state } = useLocation();

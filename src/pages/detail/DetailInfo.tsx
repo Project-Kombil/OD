@@ -10,9 +10,9 @@ import {
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-import { Picture } from "../assets/Interface";
+import { Picture } from "../../assets/interface";
 
-import { randomNumberInRange } from "../pages/Detail";
+import { randomNumberInRange } from "../../assets/static/randomNumberGenerator";
 
 function DetailInfo(data: Picture) {
 	const likeCount = randomNumberInRange(10, 74);

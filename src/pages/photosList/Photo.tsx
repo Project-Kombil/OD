@@ -2,7 +2,7 @@
 import { Card, CardActionArea, CardMedia } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import { Picture } from "../../assets/Interface";
+import { Picture } from "../../assets/interface";
 
 function Photo(data: Picture) {
 	// const [data, setData] = useState("This");

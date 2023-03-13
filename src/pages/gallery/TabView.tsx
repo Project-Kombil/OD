@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Box, Tab } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 
-import PhotosList from "./PhotosList";
-import VideosList from "./VideosList";
+import PhotosList from "../photosList";
+import VideosList from "../videosList";
 
 function TabView(state: any) {
 	const [value, setValue] = useState("1");

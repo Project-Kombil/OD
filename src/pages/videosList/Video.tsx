@@ -1,7 +1,7 @@
 import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
-import { Video as Motion } from "../../assets/Interface";
+import { Video as Motion } from "../../assets/interface";
 
 function Video(data: Motion) {
 	return (
