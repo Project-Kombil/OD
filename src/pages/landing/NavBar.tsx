@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { AppBar, Box, Toolbar, Typography, IconButton } from "@mui/material";
+import {
+	AppBar,
+	Box,
+	IconButton,
+	Toolbar,
+	Tooltip,
+	Typography,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import MoreIcon from "@mui/icons-material/MoreVert";
@@ -11,17 +18,18 @@ import { variableDeclaration } from "../../assets/interface";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	alignItems: "flex-start",
-	paddingTop: theme.spacing(1),
+	paddingTop: theme.spacing(2),
 	paddingBottom: theme.spacing(2),
 }));
 
-const CustomizedAppBar = styled(AppBar)`
-	color: #ab42e3;
-`;
-
-function NavBar(props: variableDeclaration) {
+function NavBar({ name }: variableDeclaration) {
 	const [open, setOpen] = useState<any>(false);
 
+	const appBarColor = name === "DETAIL PAGE" ? "transparent" : "#7b5dbf";
+	const appBarPosition = name === "DETAIL PAGE" ? "absolute" : "static";
+	const appBarElavation = name === "DETAIL PAGE" ? 0 : 4;
+
+	// Draw Functions
 	const handleDrawerOpen = () => {
 		setOpen(true);
 	};
@@ -32,12 +40,10 @@ function NavBar(props: variableDeclaration) {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<CustomizedAppBar
-				sx={{ zIndex: 99 }}
-				position={props.name === "DETAIL" ? "absolute" : "static"}
-				// color={props.name === "DETAIL" ? "transparent" : "primary"}
-				color={props.name === "DETAIL" ? "transparent" : "primary"}
-				elevation={props.name === "DETAIL" ? 0 : 4}
+			<AppBar
+				sx={{ zIndex: 99, backgroundColor: appBarColor }}
+				position={appBarPosition}
+				elevation={appBarElavation}
 			>
 				<StyledToolbar>
 					<IconButton
@@ -60,19 +66,21 @@ function NavBar(props: variableDeclaration) {
 						color="white"
 						fontWeight="bold"
 					>
-						{props.name}
+						{name}
 					</Typography>
-					<IconButton
-						sx={{ color: "white" }}
-						size="large"
-						aria-label="display more actions"
-						edge="end"
-						color="inherit"
-					>
-						<MoreIcon />
-					</IconButton>
+					<Tooltip title="Does Nothing">
+						<IconButton
+							sx={{ color: "white" }}
+							size="large"
+							aria-label="display more actions"
+							edge="end"
+							color="inherit"
+						>
+							<MoreIcon />
+						</IconButton>
+					</Tooltip>
 				</StyledToolbar>
-			</CustomizedAppBar>
+			</AppBar>
 			<DrawerMenu open={open} onClose={handleDrawerClose} />
 		</Box>
 	);

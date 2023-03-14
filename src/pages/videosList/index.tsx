@@ -1,9 +1,8 @@
-// import { useEffect, useState } from "react";
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import Video from "./Video";
 
-// variable declarations for type
-import { Gallery, Video as Motion } from "../../assets/interface";
+// variable declarations for types
+import { Gallery, Picture } from "../../assets/interface";
 
 // dummy data
 import { gallery } from "../../api/Objects";
@@ -12,19 +11,13 @@ const galleryData: Gallery = gallery;
 
 function VideosList() {
 	return (
-		<Box
-			sx={{
-				display: "flex",
-				flexWrap: "wrap",
-				justifyContent: "flex-start",
-			}}
-		>
-			{galleryData.videos.map((data: Motion) => (
-				<Box key={data.id}>
+		<Grid container spacing={2}>
+			{galleryData.pictures.map((data: Picture) => (
+				<Grid item key={data.id}>
 					<Video {...data} />
-				</Box>
+				</Grid>
 			))}
-		</Box>
+		</Grid>
 	);
 }
 

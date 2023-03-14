@@ -1,32 +1,17 @@
 import { Link } from "react-router-dom";
-import { Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import { Card, CardActionArea, CardMedia } from "@mui/material";
 
-import { Video as Motion } from "../../assets/interface";
+// import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+// import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
-function Video(data: Motion) {
+import { Picture } from "../../assets/interface";
+
+function Video(data: Picture) {
 	return (
-		<Card sx={{ maxWidth: 345, m: 1 }}>
+		<Card sx={{ maxWidth: 325, borderRadius: 0 }}>
 			<Link to={"/detail"} state={data}>
 				<CardActionArea>
-					<CardMedia
-						component="video"
-						height="100%"
-						controls
-						image={data.video_url}
-					/>
-					<CardContent
-						sx={{
-							color: "grey",
-							position: "absolute",
-						}}
-					>
-						<ThumbUpIcon
-							sx={{
-								color: "grey",
-							}}
-						/>
-					</CardContent>
+					<CardMedia component="img" src={data.image_url} alt="Video" />
 				</CardActionArea>
 			</Link>
 		</Card>

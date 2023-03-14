@@ -6,7 +6,7 @@ import {
 	CardMedia,
 	Typography,
 } from "@mui/material";
-// import { css } from "@emotion/react";
+
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
@@ -16,19 +16,6 @@ import { Picture } from "../../assets/interface";
 // function for random number generator
 import { randomNumberInRange } from "../../assets/static/Functions";
 
-// Emotion Overlay
-// const coverOverlay: any = css`
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	background-color: rgba(171, 66, 227, 0.5);
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: center;
-// `;
-
 function DetailInfo(data: Picture) {
 	const likeCount = randomNumberInRange(10, 74);
 	const commentCount = randomNumberInRange(10, 74);
@@ -37,55 +24,53 @@ function DetailInfo(data: Picture) {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<Card>
-				<CardActionArea>
-					<CardMedia component="img" height="400" image={url} alt="image" />
+			<Card sx={{ borderRadius: 0, position: "relative" }}>
+				<CardActionArea disabled>
+					<CardMedia
+						component="img"
+						height="400"
+						image={url}
+						alt="image"
+						sx={{ position: "relative" }}
+					/>
 
 					<CardContent
 						sx={{
 							position: "absolute",
+
 							bottom: 0,
-							zIndex: 1,
+							zIndex: 99,
+							height: 1,
 							width: 1,
+							py: 4,
+							color: "white",
+							backgroundColor: "rgba(123, 93, 191, 0.5)",
 						}}
 					>
-						<Box>
-							<Typography
-								sx={{
-									my: 2,
-								}}
-								variant="h4"
-								component="div"
-								color="white"
-							>
+						<Box
+							sx={{
+								display: "flex",
+								flexDirection: "column",
+								alignContent: "flex-end",
+							}}
+						>
+							<Typography variant="h4" component="div">
 								{name}
 							</Typography>
-							<Typography variant="body1" component="div" color="white">
+							<Typography variant="body1" component="div">
 								By: Alan Tiger At: Paris, France
 							</Typography>
 							<Typography
-								align="right"
 								variant="body1"
 								component="div"
-								color="white"
+								sx={{ textAlign: "right" }}
 							>
-								<FavoriteIcon
-									sx={{
-										mr: 1,
-									}}
-									fontSize="inherit"
-								/>
+								<FavoriteIcon sx={{ mr: 1 }} fontSize="inherit" />
 								{likeCount}
-								<ChatBubbleIcon
-									sx={{
-										ml: 2,
-										mr: 1,
-									}}
-									fontSize="inherit"
-								/>
+								<ChatBubbleIcon sx={{ ml: 2, mr: 1 }} fontSize="inherit" />
 								{commentCount}
 							</Typography>
-							<Typography variant="body1" component="div" color="white">
+							<Typography variant="body1" component="div">
 								On: March 31st, 2016
 							</Typography>
 						</Box>

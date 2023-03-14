@@ -1,8 +1,8 @@
 // import { useEffect, useState } from "react";
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import Photo from "./Photo";
 
-// variable declarations for type
+// variable declarations for types
 import { Gallery, Picture } from "../../assets/interface";
 
 import { gallery } from "../../api/Objects";
@@ -26,19 +26,13 @@ function PhotosList() {
 	// 	}, []);
 
 	return (
-		<Box
-			sx={{
-				display: "flex",
-				flexWrap: "wrap",
-				justifyContent: "flex-start",
-			}}
-		>
+		<Grid container spacing={2}>
 			{galleryData.pictures.map((data: Picture) => (
-				<Box key={data.id}>
+				<Grid item key={data.id}>
 					<Photo {...data} />
-				</Box>
+				</Grid>
 			))}
-		</Box>
+		</Grid>
 	);
 }
 

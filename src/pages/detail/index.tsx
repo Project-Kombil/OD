@@ -21,12 +21,12 @@ function Detail() {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<NavBar name="DETAIL" />
+			<NavBar name="DETAIL PAGE" />
 			<DetailInfo {...state} />
-
-			{galleryData.videos.map((data: Motion) => (
-				<Box key={data.id}>
+			<Box sx={{ py: 4 }}>
+				{galleryData.videos.map((data: Motion) => (
 					<Comment
+						key={data.id}
 						profilePic={
 							"https://randomuser.me/api/portraits/women/" +
 							randomNumberInRange(10, 50) +
@@ -38,8 +38,8 @@ function Detail() {
 						likes={randomNumberInRange(10, 550)}
 						commentCount={randomNumberInRange(12, 100)}
 					/>
-				</Box>
-			))}
+				))}
+			</Box>
 		</Box>
 	);
 }

@@ -1,4 +1,4 @@
-import { Grid, Avatar, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
@@ -20,19 +20,14 @@ function Comment({
 			justifyContent="center"
 			sx={{
 				px: 3,
-				py: 2,
+				py: 1,
 				width: 1,
 				borderBottom: 1,
 				borderColor: newColor,
 			}}
 		>
 			<Grid item>
-				<Avatar
-					src={profilePic}
-					alt="Profile Pic"
-					variant="square"
-					sx={{ height: "100%", width: "100%", borderRadius: 0 }}
-				/>
+				<img src={profilePic} alt="Profile Pic" height="80px" />
 			</Grid>
 			<Grid item xs>
 				<Grid
@@ -43,41 +38,51 @@ function Comment({
 					sx={{ px: 1, height: 1 }}
 				>
 					<Grid item>
-						<Typography sx={{ color: newColor }} variant="h6" fontWeight="bold">
+						<Typography
+							sx={{ color: newColor }}
+							variant="body1"
+							fontWeight="bold"
+						>
 							{name}
 						</Typography>
 					</Grid>
 					<Grid item>
-						<Typography sx={{ color: newColor }} variant="body1">
+						<Typography sx={{ color: newColor }} variant="body2">
 							{comment}
 						</Typography>
 					</Grid>
 					<Grid item container alignItems="center" spacing={1}>
 						<Grid item>
-							<WatchLaterIcon color="disabled" fontSize="small" />
+							<WatchLaterIcon sx={{ color: newColor, fontSize: "0.7em" }} />
 						</Grid>
 						<Grid item>
 							<Typography
-								sx={{ color: newColor }}
+								sx={{ color: newColor, fontSize: "0.55em" }}
 								paddingRight={3}
-								variant="body2"
+								variant="overline"
 							>
 								{time} minutes ago
 							</Typography>
 						</Grid>
 						<Grid item>
-							<FavoriteIcon color="disabled" fontSize="small" />
+							<FavoriteIcon sx={{ color: newColor, fontSize: "0.7em" }} />
 						</Grid>
 						<Grid item>
-							<Typography sx={{ color: newColor }} variant="body2">
+							<Typography
+								sx={{ color: newColor, fontSize: "0.55em" }}
+								variant="overline"
+							>
 								{likes}
 							</Typography>
 						</Grid>
 						<Grid item>
-							<ChatBubbleIcon color="disabled" fontSize="small" />
+							<ChatBubbleIcon sx={{ color: newColor, fontSize: "0.7em" }} />
 						</Grid>
 						<Grid item>
-							<Typography sx={{ color: newColor }} variant="body2">
+							<Typography
+								sx={{ color: newColor, fontSize: "0.55em" }}
+								variant="overline"
+							>
 								{commentCount}
 							</Typography>
 						</Grid>
