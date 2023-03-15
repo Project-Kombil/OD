@@ -24,53 +24,44 @@ function DetailInfo(data: Picture) {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<Card sx={{ borderRadius: 0, position: "relative" }}>
+			<Card sx={{ borderRadius: 0 }}>
 				<CardActionArea disabled>
-					<CardMedia
-						component="img"
-						height="400"
-						image={url}
-						alt="image"
-						sx={{ position: "relative" }}
-					/>
+					<CardMedia component="img" height="400" image={url} alt="image" />
 
 					<CardContent
 						sx={{
-							position: "absolute",
-
-							bottom: 0,
-							zIndex: 99,
 							height: 1,
+							position: "absolute",
 							width: 1,
-							py: 4,
+							bottom: 0,
 							color: "white",
 							backgroundColor: "rgba(123, 93, 191, 0.5)",
 						}}
 					>
 						<Box
 							sx={{
-								display: "flex",
-								flexDirection: "column",
-								alignContent: "flex-end",
+								position: "absolute",
+								bottom: 5,
+								pb: 3,
 							}}
 						>
-							<Typography variant="h4" component="div">
+							<Typography variant="h5" component="p">
 								{name}
 							</Typography>
-							<Typography variant="body1" component="div">
+							<Typography variant="body2" component="p">
 								By: Alan Tiger At: Paris, France
 							</Typography>
 							<Typography
 								variant="body1"
-								component="div"
-								sx={{ textAlign: "right" }}
+								component="p"
+								sx={{ textAlign: "right", width: "95vw" }}
 							>
 								<FavoriteIcon sx={{ mr: 1 }} fontSize="inherit" />
 								{likeCount}
 								<ChatBubbleIcon sx={{ ml: 2, mr: 1 }} fontSize="inherit" />
 								{commentCount}
 							</Typography>
-							<Typography variant="body1" component="div">
+							<Typography variant="body2" component="p">
 								On: March 31st, 2016
 							</Typography>
 						</Box>
