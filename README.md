@@ -1,43 +1,39 @@
-# OrangeDigital React Challenge
+# Orange Digital React Challenge
 
-This the submission for the OrangeDigital React Challenge. This project is a responsive web application with two pages, as per the provided layout image. The hamburger menu has one link for the gallery page and one link for the detail page.
+This is the submission for the Orange Digital React Challenge. This project is a basic web application satisfying the layout and specifications provided at [https://bitbucket.org/orangedigital/od-react-challege/src/master/](https://bitbucket.org/orangedigital/od-react-challege/src/master/).
 
-Built with Typescript.
+## Installing & Running App
 
-## Installation
+To install and run the project:
 
-To install and run the project, follow these steps:
-
-1. Clone this repository.
-2. Run `yarn install` to install the dependencies.
-3. Run `yarn start` to start the project.
+1. Clone this repository to your local machine.
+2. Run `yarn install` in terminal to install dependencies.
+3. Run `yarn start` in terminal to start both backend/frontend.
 4. Open [http://localhost:3000](http://localhost:3000) to view the project in the browser.
 
-The `yarn start` command will start both the frontend and backend servers concurrently. The frontend server will be available on port 3000, and the backend server will be available on port 4000.
+## Backend API
 
-### Backend API
-
-The project includes a simple NodeJS server that serves a RESTful API endpoint with a JSON structure data to populate the pages with information. The JSON includes the following information:
+In the `backend` folder, the project includes a simple ExpressJS server that serves a RESTful API with endpoints corresponding to each of the two pages in the application: gallery page and detail page. The JSON includes the following information:
 
 * Page Name
 * User Details
 * Video Details
 * Pictures Details
 
-The project includes a simple NodeJS server that serves a RESTful API with the following three endpoints:
-1. `/api/test` : Returns a simple test message to verify that the API is running.
-2. `/api/gallery` : Returns an object of picture details, including the picture URL and caption.
-3. `/api/detail` : Returns an object with details for the Details Page.
+Note: The server uses the Express.js framework and the cors package to enable cross-origin resource sharing on local machine.
 
-The API is located in the backend directory. The server uses the Express.js framework and the cors package to enable cross-origin resource sharing.
+## Frontend React
+* In the `frontend` directory, the frontend of the app uses the React Framework and is mostly written in Typescript.
+* The project uses the Material UI library for styling the React components. Custom styles are implemented using Emotion, a CSS-in-JS library.
+* The app features two main pages: The Gallery page, and the Details page. React components are built around these two page components.
 
-### Styling
-The project uses the Material UI library for styling the React components. Custom styles are implemented using Emotion, a CSS-in-JS library.
-
-### Coding Guidelines
+## Coding Guidelines
 
 * The code follows the eslint guidelines for JavaScript linting.
 * The code follows the stylelint guidelines for SCSS linting.
 * The editor is configured using the editorconfig file.
 * The code is written functionally and is testable.
+
+## Live Preview
+To preview a live and working version of the app, go to: ...
 
