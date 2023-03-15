@@ -1,4 +1,4 @@
-# OrangeDigital React Challenge
+# Orange Digital React Challenge
 
 This is the submission for the Orange Digital React Challenge. This project is a basic web application satisfying the layout and specifications provided at [https://bitbucket.org/orangedigital/od-react-challege/src/master/](https://bitbucket.org/orangedigital/od-react-challege/src/master/).
 
