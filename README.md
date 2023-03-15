@@ -41,6 +41,3 @@ The project uses the Material UI library for styling the React components. Custo
 * The editor is configured using the editorconfig file.
 * The code is written functionally and is testable.
 
-### Running the Backend and Frontend Concurrently
-
-Thank you for taking the time to review my submission.
