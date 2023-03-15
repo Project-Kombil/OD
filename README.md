@@ -22,8 +22,10 @@ In the `backend` folder, the project includes a simple ExpressJS server that ser
 
 Note: The server uses the Express.js framework and the cors package to enable cross-origin resource sharing on local machine.
 
-### Styling
-The project uses the Material UI library for styling the React components. Custom styles are implemented using Emotion, a CSS-in-JS library.
+### Frontend React
+* In the `frontend` directory, the frontend of the app uses the React Framework and is mostly written in Typescript.
+* The project uses the Material UI library for styling the React components. Custom styles are implemented using Emotion, a CSS-in-JS library.
+* The app features two main pages: The Gallery page, and the Details page. React components are built around these two page components.
 
 ### Coding Guidelines
 
