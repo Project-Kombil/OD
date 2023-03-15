@@ -1,3 +1,10 @@
+/**
+ * Title: Orange Digital React Challenge Frontend (React)
+ * Description: UI for the Orange Digital React challenge created with React
+ * Author: Be Pacific Digital Agency
+ * Repo: https://github.com/louisronron/orangedigital
+ * Date: 07-03-2023
+ */
 import { useState } from "react";
 import {
 	AppBar,
@@ -15,7 +22,7 @@ import DrawerMenu from "./DrawMenu";
 
 // variable declarations for type
 interface variableDeclaration {
-	name: string;
+	title: string;
 }
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -24,12 +31,12 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	paddingBottom: theme.spacing(2),
 }));
 
-const NavBar = ({ name }: variableDeclaration) => {
+const NavBar = ({ title }: variableDeclaration) => {
 	const [open, setOpen] = useState<any>(false);
 
-	const appBarColor = name === "DETAIL PAGE" ? "transparent" : "#7b5dbf";
-	const appBarPosition = name === "DETAIL PAGE" ? "absolute" : "static";
-	const appBarElavation = name === "DETAIL PAGE" ? 0 : 4;
+	const appBarColor = title === "DETAIL PAGE" ? "transparent" : "#7b5dbf";
+	const appBarPosition = title === "DETAIL PAGE" ? "absolute" : "static";
+	const appBarElavation = title === "DETAIL PAGE" ? 0 : 4;
 
 	// Draw Functions
 	const handleDrawerOpen = () => {
@@ -68,7 +75,7 @@ const NavBar = ({ name }: variableDeclaration) => {
 						color="white"
 						fontWeight="bold"
 					>
-						{name}
+						{title}
 					</Typography>
 					<Tooltip title="Does Nothing">
 						<IconButton

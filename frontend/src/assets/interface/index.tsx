@@ -1,5 +1,5 @@
 export interface Gallery {
-	name: string;
+	title: string;
 	videos: Video[];
 	pictures: Picture[];
 }

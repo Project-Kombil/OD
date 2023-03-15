@@ -1,3 +1,10 @@
+/**
+ * Title: Orange Digital React Challenge Frontend (React)
+ * Description: UI for the Orange Digital React challenge created with React
+ * Author: Be Pacific Digital Agency
+ * Repo: https://github.com/louisronron/orangedigital
+ * Date: 07-03-2023
+ */
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
@@ -28,25 +35,30 @@ const Detail = () => {
 	// state for Details
 	let { state } = useLocation();
 
-	return (
-		<Box sx={{ flexGrow: 1 }}>
-			<NavBar name="DETAIL PAGE" />
-			<DetailInfo {...state} />
-			<Box sx={{ py: 4 }}>
-				{data?.comments.map((data: CommentLists) => (
-					<Comment
-						key={data.id}
-						profilePic={data.profile_pic_url}
-						name={data.name}
-						comment={data.comment}
-						time={data.time}
-						likes={data.total_likes}
-						commentCount={data.total_comments}
-					/>
-				))}
+	if (data) {
+		const { title } = data;
+		return (
+			<Box sx={{ flexGrow: 1 }}>
+				<NavBar title={title} />
+				<DetailInfo {...state} />
+				<Box sx={{ py: 4 }}>
+					{data?.comments.map((data: CommentLists) => (
+						<Comment
+							key={data.id}
+							profilePic={data.profile_pic_url}
+							name={data.name}
+							comment={data.comment}
+							time={data.time}
+							likes={data.total_likes}
+							commentCount={data.total_comments}
+						/>
+					))}
+				</Box>
 			</Box>
-		</Box>
-	);
+		);
+	} else {
+		return <></>;
+	}
 };
 
 export default Detail;
