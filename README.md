@@ -34,3 +34,6 @@ Note: The server uses the Express.js framework and the cors package to enable cr
 * The editor is configured using the editorconfig file.
 * The code is written functionally and is testable.
 
+## Live Preview
+To preview a live and working version of the app, go to: ...
+
