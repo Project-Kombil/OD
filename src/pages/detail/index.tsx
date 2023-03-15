@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
 
@@ -6,16 +7,28 @@ import DetailInfo from "./DetailInfo";
 import Comment from "../commentList/Comment";
 
 // variable declarations for type
-import { Gallery, Video as Motion } from "../../assets/interface";
+import {
+	Comments as CommentLists,
+	Detail as Details,
+} from "../../assets/interface";
 
-// Random Number Generator
-import { randomNumberInRange } from "../../assets/static/Functions";
-
-// dummy data
-import { gallery } from "../../api/Objects";
-const galleryData: Gallery = gallery;
+async function fetchData(): Promise<Details> {
+	const response = await fetch("http://localhost:4000/api/detail");
+	const data = await response.json();
+	return data;
+}
 
 function Detail() {
+	const [data, setData] = useState<Details>();
+
+	useEffect(() => {
+		async function getData() {
+			const result = await fetchData();
+			setData(result);
+		}
+		getData();
+	}, []);
+
 	// state for Details
 	let { state } = useLocation();
 
@@ -24,19 +37,15 @@ function Detail() {
 			<NavBar name="DETAIL PAGE" />
 			<DetailInfo {...state} />
 			<Box sx={{ py: 4 }}>
-				{galleryData.videos.map((data: Motion) => (
+				{data?.comments.map((data: CommentLists) => (
 					<Comment
 						key={data.id}
-						profilePic={
-							"https://randomuser.me/api/portraits/women/" +
-							randomNumberInRange(10, 50) +
-							".jpg"
-						}
-						name="Jane Smith"
-						comment={data.description}
-						time={randomNumberInRange(2, 60)}
-						likes={randomNumberInRange(10, 550)}
-						commentCount={randomNumberInRange(12, 100)}
+						profilePic={data.profile_pic_url}
+						name={data.name}
+						comment={data.comment}
+						time={data.time}
+						likes={data.total_likes}
+						commentCount={data.total_comments}
 					/>
 				))}
 			</Box>

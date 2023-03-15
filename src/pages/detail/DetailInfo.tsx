@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
 	Box,
 	Card,
@@ -11,22 +12,35 @@ import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 // variable declarations for type
-import { Picture } from "../../assets/interface";
+import { Detail, Picture } from "../../assets/interface";
 
-// function for random number generator
-import { randomNumberInRange } from "../../assets/static/Functions";
+async function fetchData(): Promise<Detail> {
+	const response = await fetch("http://localhost:4000/api/detail");
+	const data = await response.json();
+	return data;
+}
 
-function DetailInfo(data: Picture) {
-	const likeCount = randomNumberInRange(10, 74);
-	const commentCount = randomNumberInRange(10, 74);
-	const name = data.name;
-	const url = data.image_url;
+function DetailInfo(value: Picture) {
+	const [data, setData] = useState<Detail>();
+
+	useEffect(() => {
+		async function getData() {
+			const result = await fetchData();
+			setData(result);
+		}
+		getData();
+	}, []);
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<Card sx={{ borderRadius: 0 }}>
 				<CardActionArea disabled>
-					<CardMedia component="img" height="400" image={url} alt="image" />
+					<CardMedia
+						component="img"
+						height="400"
+						image={value.image_url}
+						alt="image"
+					/>
 
 					<CardContent
 						sx={{
@@ -46,23 +60,23 @@ function DetailInfo(data: Picture) {
 							}}
 						>
 							<Typography variant="h5" component="p">
-								{name}
+								{data?.subtitle}
 							</Typography>
 							<Typography variant="body2" component="p">
-								By: Alan Tiger At: Paris, France
+								By: {data?.by} At: {data?.at}
 							</Typography>
 							<Typography
 								variant="body1"
 								component="p"
-								sx={{ textAlign: "right", width: "95vw" }}
+								sx={{ textAlign: "right", width: "92vw" }}
 							>
 								<FavoriteIcon sx={{ mr: 1 }} fontSize="inherit" />
-								{likeCount}
+								{data?.like_count}
 								<ChatBubbleIcon sx={{ ml: 2, mr: 1 }} fontSize="inherit" />
-								{commentCount}
+								{data?.comment_count}
 							</Typography>
 							<Typography variant="body2" component="p">
-								On: March 31st, 2016
+								On: {data?.on}
 							</Typography>
 						</Box>
 					</CardContent>

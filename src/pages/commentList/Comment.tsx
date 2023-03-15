@@ -4,6 +4,8 @@ import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import { grey } from "@mui/material/colors";
 
+import { TimeFrame } from "../../assets/static/Functions";
+
 function Comment({
 	profilePic,
 	name,
@@ -61,7 +63,7 @@ function Comment({
 								paddingRight={3}
 								variant="overline"
 							>
-								{time} minutes ago
+								{TimeFrame(time)}
 							</Typography>
 						</Grid>
 						<Grid item>

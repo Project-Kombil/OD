@@ -14,7 +14,9 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import DrawerMenu from "./DrawMenu";
 
 // variable declarations for type
-import { variableDeclaration } from "../../assets/interface";
+type variableDeclaration = {
+	name: string;
+};
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	alignItems: "flex-start",

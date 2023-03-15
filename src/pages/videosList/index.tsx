@@ -1,18 +1,30 @@
+import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
+
 import Video from "./Video";
 
 // variable declarations for types
-import { Gallery, Picture } from "../../assets/interface";
+import { Picture } from "../../assets/interface";
 
-// dummy data
-import { gallery } from "../../api/Objects";
-
-const galleryData: Gallery = gallery;
+async function fetchData(): Promise<Picture[]> {
+	const response = await fetch("http://localhost:4000/api/gallery");
+	const data = await response.json();
+	return data.pictures;
+}
 
 function VideosList() {
+	const [data, setData] = useState<Picture[]>([]);
+
+	useEffect(() => {
+		async function getData() {
+			const result = await fetchData();
+			setData(result);
+		}
+		getData();
+	}, []);
 	return (
 		<Grid container spacing={2}>
-			{galleryData.pictures.map((data: Picture) => (
+			{data.map((data: Picture) => (
 				<Grid item key={data.id}>
 					<Video {...data} />
 				</Grid>

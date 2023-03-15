@@ -34,7 +34,7 @@ function Video(data: Picture) {
 								width: 1,
 								justifyContent: "center",
 								alignItems: "center",
-								color: "rgba(130,130,130, 0.5)",
+								color: "rgba(255,255,255, 0.5)",
 							}}
 						>
 							<PlayCircleOutlineIcon sx={{ fontSize: 100 }} />
@@ -50,7 +50,7 @@ function Video(data: Picture) {
 								pb: 1,
 								pr: 1,
 								bottom: 0,
-								color: "rgba(130,130,130, 0.5)",
+								color: "rgba(255,255,255, 0.5)",
 							}}
 						>
 							<ThumbUpIcon fontSize="large" />
