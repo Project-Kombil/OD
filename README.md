@@ -11,7 +11,7 @@ To install and run the project:
 3. Run `yarn start` in terminal to start both backend/frontend.
 4. Open [http://localhost:3000](http://localhost:3000) to view the project in the browser.
 
-### Backend API
+## Backend API
 
 In the `backend` folder, the project includes a simple ExpressJS server that serves a RESTful API with endpoints corresponding to each of the two pages in the application: gallery page and detail page. The JSON includes the following information:
 
@@ -22,12 +22,12 @@ In the `backend` folder, the project includes a simple ExpressJS server that ser
 
 Note: The server uses the Express.js framework and the cors package to enable cross-origin resource sharing on local machine.
 
-### Frontend React
+## Frontend React
 * In the `frontend` directory, the frontend of the app uses the React Framework and is mostly written in Typescript.
 * The project uses the Material UI library for styling the React components. Custom styles are implemented using Emotion, a CSS-in-JS library.
 * The app features two main pages: The Gallery page, and the Details page. React components are built around these two page components.
 
-### Coding Guidelines
+## Coding Guidelines
 
 * The code follows the eslint guidelines for JavaScript linting.
 * The code follows the stylelint guidelines for SCSS linting.
