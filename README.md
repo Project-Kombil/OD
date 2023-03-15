@@ -10,10 +10,10 @@ To install and run the project, follow these steps:
 
 1. Clone this repository.
 2. Run `yarn install` to install the dependencies.
-3. Run yarn `start-app` to start the project.
+3. Run `yarn start` to start the project.
 4. Open [http://localhost:3000](http://localhost:3000) to view the project in the browser.
 
-The yarn `start-app` command will start both the frontend and backend servers concurrently. The frontend server will be available on port 3000, and the backend server will be available on port 4000.
+The `yarn start` command will start both the frontend and backend servers concurrently. The frontend server will be available on port 3000, and the backend server will be available on port 4000.
 
 ### Backend API
 
