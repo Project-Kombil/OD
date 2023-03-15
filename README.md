@@ -7,8 +7,8 @@ This is the submission for the Orange Digital React Challenge. This project is a
 To install and run the project:
 
 1. Clone this repository to your local machine.
-2. In the root directory, run `yarn install` in terminal to install dependencies (this command covers both frontend and backend dependencies).
-3. In the root directory, run `yarn start` in terminal to start the project. The backend will start prior to the frontend.
+2. Run `yarn install` in terminal to install dependencies.
+3. Run `yarn start` in terminal to start both backend/frontend.
 4. Open [http://localhost:3000](http://localhost:3000) to view the project in the browser.
 
 ### Backend API
