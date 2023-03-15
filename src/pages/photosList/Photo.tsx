@@ -5,7 +5,7 @@ import { Picture } from "../../assets/interface";
 
 function Photo(data: Picture) {
 	return (
-		<Card sx={{ width: 325, borderRadius: 0 }}>
+		<Card sx={{ width: 330, borderRadius: 0 }}>
 			<Link to={"/detail"} state={data}>
 				<CardActionArea>
 					<CardMedia component="img" src={data.image_url} alt="Picture" />

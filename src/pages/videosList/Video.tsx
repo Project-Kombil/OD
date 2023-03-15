@@ -14,7 +14,7 @@ import { Picture } from "../../assets/interface";
 
 function Video(data: Picture) {
 	return (
-		<Card sx={{ width: 350, borderRadius: 0 }}>
+		<Card sx={{ width: 330, borderRadius: 0 }}>
 			<Link to={"/detail"} state={data}>
 				<CardActionArea>
 					<CardMedia component="img" src={data.image_url} alt="Video" />
