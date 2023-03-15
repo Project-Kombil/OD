@@ -14,20 +14,16 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 // variable declarations for type
 import { Detail, Picture } from "../../assets/interface";
 
-async function fetchData(): Promise<Detail> {
-	const response = await fetch("http://localhost:4000/api/detail");
-	const data = await response.json();
-	return data;
-}
+import { fetchData } from "../../api";
 
-function DetailInfo(value: Picture) {
+const DetailInfo = (value: Picture) => {
 	const [data, setData] = useState<Detail>();
 
 	useEffect(() => {
-		async function getData() {
-			const result = await fetchData();
+		const getData = async () => {
+			const result = await fetchData("/api/detail");
 			setData(result);
-		}
+		};
 		getData();
 	}, []);
 
@@ -84,6 +80,6 @@ function DetailInfo(value: Picture) {
 			</Card>
 		</Box>
 	);
-}
+};
 
 export default DetailInfo;

@@ -1,7 +1,7 @@
 import { useRouteError } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 
-function Error() {
+const Error = () => {
 	const error = useRouteError();
 
 	return (
@@ -22,6 +22,6 @@ function Error() {
 			</Box>
 		</Box>
 	);
-}
+};
 
 export default Error;

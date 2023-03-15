@@ -5,7 +5,7 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import PhotosList from "../photosList";
 import VideosList from "../videosList";
 
-function TabView() {
+const TabView = () => {
 	const [value, setValue] = useState<string>("1");
 
 	const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -35,6 +35,6 @@ function TabView() {
 			</TabContext>
 		</Box>
 	);
-}
+};
 
 export default TabView;

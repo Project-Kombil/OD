@@ -12,7 +12,7 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
 import { Picture } from "../../assets/interface";
 
-function Video(data: Picture) {
+const Video = (data: Picture) => {
 	return (
 		<Card sx={{ width: 330, borderRadius: 0 }}>
 			<Link to={"/detail"} state={data}>
@@ -60,6 +60,6 @@ function Video(data: Picture) {
 			</Link>
 		</Card>
 	);
-}
+};
 
 export default Video;

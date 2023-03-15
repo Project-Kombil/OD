@@ -12,18 +12,14 @@ import {
 	Detail as Details,
 } from "../../assets/interface";
 
-async function fetchData(): Promise<Details> {
-	const response = await fetch("http://localhost:4000/api/detail");
-	const data = await response.json();
-	return data;
-}
+import { fetchData } from "../../api";
 
-function Detail() {
+const Detail = () => {
 	const [data, setData] = useState<Details>();
 
 	useEffect(() => {
 		async function getData() {
-			const result = await fetchData();
+			const result = await fetchData("/api/detail");
 			setData(result);
 		}
 		getData();
@@ -51,6 +47,6 @@ function Detail() {
 			</Box>
 		</Box>
 	);
-}
+};
 
 export default Detail;

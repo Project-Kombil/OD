@@ -6,14 +6,14 @@ import { grey } from "@mui/material/colors";
 
 import { TimeFrame } from "../../assets/static/Functions";
 
-function Comment({
+const Comment = ({
 	profilePic,
 	name,
 	comment,
 	time,
 	commentCount,
 	likes,
-}: any) {
+}: any) => {
 	const newColor = grey[700];
 	return (
 		<Grid
@@ -93,6 +93,6 @@ function Comment({
 			</Grid>
 		</Grid>
 	);
-}
+};
 
 export default Comment;

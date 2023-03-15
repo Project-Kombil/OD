@@ -11,7 +11,7 @@ import {
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import InfoIcon from "@mui/icons-material/Info";
 
-function DrawerMenu({ open, onClose }: any) {
+const DrawerMenu = ({ open, onClose }: any) => {
 	return (
 		<Drawer anchor="left" open={open} onClose={onClose}>
 			<Box
@@ -49,6 +49,6 @@ function DrawerMenu({ open, onClose }: any) {
 			</Box>
 		</Drawer>
 	);
-}
+};
 
 export default DrawerMenu;

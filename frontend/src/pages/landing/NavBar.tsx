@@ -14,9 +14,9 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import DrawerMenu from "./DrawMenu";
 
 // variable declarations for type
-type variableDeclaration = {
+interface variableDeclaration {
 	name: string;
-};
+}
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	alignItems: "flex-start",
@@ -24,7 +24,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	paddingBottom: theme.spacing(2),
 }));
 
-function NavBar({ name }: variableDeclaration) {
+const NavBar = ({ name }: variableDeclaration) => {
 	const [open, setOpen] = useState<any>(false);
 
 	const appBarColor = name === "DETAIL PAGE" ? "transparent" : "#7b5dbf";
@@ -86,6 +86,6 @@ function NavBar({ name }: variableDeclaration) {
 			<DrawerMenu open={open} onClose={handleDrawerClose} />
 		</Box>
 	);
-}
+};
 
 export default NavBar;

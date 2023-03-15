@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { Picture } from "../../assets/interface";
 
-function Photo(data: Picture) {
+const Photo = (data: Picture) => {
 	return (
 		<Card sx={{ width: 330, borderRadius: 0 }}>
 			<Link to={"/detail"} state={data}>
@@ -13,6 +13,6 @@ function Photo(data: Picture) {
 			</Link>
 		</Card>
 	);
-}
+};
 
 export default Photo;

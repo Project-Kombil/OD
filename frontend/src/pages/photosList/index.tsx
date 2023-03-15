@@ -12,14 +12,14 @@ async function fetchData(): Promise<Picture[]> {
 	return data.pictures;
 }
 
-function PhotosList() {
+const PhotosList = () => {
 	const [data, setData] = useState<Picture[]>([]);
 
 	useEffect(() => {
-		async function getData() {
+		const getData = async () => {
 			const result = await fetchData();
 			setData(result);
-		}
+		};
 		getData();
 	}, []);
 
@@ -32,6 +32,6 @@ function PhotosList() {
 			))}
 		</Grid>
 	);
-}
+};
 
 export default PhotosList;
