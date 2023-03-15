@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 
 import NavBar from "../landing/NavBar";
 import DetailInfo from "./DetailInfo";
-import Comment from "../commentList/Comment";
+import Comment from "../comment";
 
 // variable declarations for type
 import {
